@@ -63,3 +63,8 @@ jobs:
           output: 'dependency-results.sbom.json'
           #image-ref: '.'
           github-pat: '${{ secrets.GITHUB_TOKEN }}'
+      - uses: anchore/sbom-action@v0
+        if: runner.os != 'Windows'
+        with:
+          path: .
+          dependency-snapshot: true
