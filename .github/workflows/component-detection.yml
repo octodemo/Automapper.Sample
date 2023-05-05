@@ -44,6 +44,8 @@ jobs:
           github-pat: '${{ secrets.GITHUB_TOKEN }}'
      
       - uses: anchore/sbom-action@v0
+        ##Windows Subsystem for Linux has no installed distributions.
+        if: runner.os != 'Windows'
         with:
           path: .
           dependency-snapshot: true
