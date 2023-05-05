@@ -33,6 +33,8 @@ jobs:
         uses: advanced-security/component-detection-dependency-submission-action@v0.0.1
         
       - name: Run Trivy in GitHub SBOM mode and submit results to Dependency Snapshots
+        ## Error: Container action is only supported on Linux
+        if: runner.os != 'Windows'
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'fs'
