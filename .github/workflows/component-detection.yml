@@ -36,7 +36,7 @@ jobs:
         continue-on-error: true
       - name: ls
         shell: pwsh
-        run: ls -ls
+        run: ls -ls component-detection
       
       - name: Run Trivy in GitHub SBOM mode and submit results to Dependency Snapshots
         ## Error: Container action is only supported on Linux
