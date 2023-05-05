@@ -19,7 +19,7 @@ jobs:
       - name: Dotnet Info
         run: dotnet --info        
       - name: Build
-        run: dotnet build
+        run: dotnet build ProCodeGuide.Samples.Automapper.sln
       - name: Component detection 
         ##if: runner.os != 'Windows'
         uses: advanced-security/component-detection-dependency-submission-action@v0.0.1
