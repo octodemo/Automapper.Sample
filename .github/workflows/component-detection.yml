@@ -32,7 +32,7 @@ jobs:
         ##https://github.com/advanced-security/component-detection-dependency-submission-action/issues/19
         ##if: runner.os != 'Windows'
         ##uses: advanced-security/component-detection-dependency-submission-action@v0.0.1
-        uses: felickz/component-detection-dependency-submission-action@windows
+        uses: felickz/component-detection-dependency-submission-action@main
         continue-on-error: true
       - name: ls
         shell: pwsh
