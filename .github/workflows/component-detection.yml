@@ -29,10 +29,8 @@ jobs:
         run: dotnet build
      
       - name: Component detection 
-        ##https://github.com/advanced-security/component-detection-dependency-submission-action/issues/19
-        ##uses: advanced-security/component-detection-dependency-submission-action@v0.0.1
-        uses: felickz/component-detection-dependency-submission-action@main
-
+        ## v0.0.2 supports windows 🎉
+        uses: advanced-security/component-detection-dependency-submission-action@v0.0.2       
       
       - name: Run Trivy in GitHub SBOM mode and submit results to Dependency Snapshots
         ## Error: Container action is only supported on Linux
